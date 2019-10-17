@@ -13,3 +13,8 @@ jobs:
       id: ts
     - name: print output
       run: echo "${{ steps.ts.outputs.time }}"
+    - name: arbitrary shell output
+      run: echo ::set-output name=action_fruit::strawberry
+      id: shell
+    - name: print shell
+      run: echo "${{ steps.shell.outputs.action_fruit }}"
