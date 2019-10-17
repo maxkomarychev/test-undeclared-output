@@ -1,0 +1,15 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/typescript-action@releases/v1
+      id: ts
+    - name: print output
+      run: echo "${{ steps.ts.outputs.time }}"
