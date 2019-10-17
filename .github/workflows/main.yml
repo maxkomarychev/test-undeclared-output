@@ -12,4 +12,4 @@ jobs:
     - uses: actions/typescript-action@releases/v1
       id: ts
     - name: print output
-      run: echo ${{ steps.ts.outputs.time }}
+      run: echo "${{ steps.ts.outputs.time }}"
